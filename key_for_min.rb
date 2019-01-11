@@ -6,15 +6,15 @@ def key_for_min_value(name_hash)
     return nil
   else
     array = []
-    name_hash.each do |key, value|
-      array << value
+    name_hash.each do |key, n|
+      array << n
     end
     min_num = array[0]
-    array.each do |value|
-      min_num = value if value < min_num
+    array.each do |n|
+      min_num = n if n < min_num
     end
-    name_hash.each do |key, value|
-      if min_num == value
+    name_hash.each do |key, n|
+      if min_num == n
         return key
       end
     end
